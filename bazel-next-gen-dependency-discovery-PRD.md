@@ -56,6 +56,8 @@ Provide a mechanism that reveals the external package dependency details for a g
 - For a Java project with a Maven dependency specified via a maven\_install or jvm\_maven\_import\_external rule, the data returned must (a) indicate that the dependency is a Maven dependency, and (b) provide the group:artifact:version (either as separate values, or combined in a string from which group, artifact, and version can be reliably parsed).
 - For a Golang project with a dependency specified using a git\_repository rule, the data returned must (a) indicate that the dependency is a git repository dependency, and (b) provide the remote (URL), repository name, and commit ID.
 
+**FR: Output.** An output file containing the list of dependencies similar to .lock files from other package managers would be ideal. This could be useful to users while making the dependencies easily discoverable by tools.
+
 ### Provide accurate data
 
 **FR: Handle selects and build options.** The mechanism must accept an (optional) set of build attribute values (https://docs.bazel.build/versions/master/configurable-attributes.html) and produce a dependency list factoring in those build attribute values and the project&#39;s select() statements.
@@ -66,4 +68,3 @@ Provide a mechanism that reveals the external package dependency details for a g
 
 **FR: Invoked from a bazel command.** It must be possible to invoke the mechanism from a bazel command. A bazel cquery command would be ideal.
 
-**FR: Output.** An output file containing the list of dependencies similar to .lock files from other package managers would be ideal. This could be useful to users while making the dependencies easily discoverable via tools.
