@@ -1,5 +1,26 @@
 # Next Generation Dependency Discovery in Bazel - PRD
 
+Status: Draft
+
+Last updated: 16 Apr 2020
+
+Authors: billings@synopsys.com
+
+Approvals
+
+| Name         | Role                              | Date           |
+| ------------ | ----------------------------------------------------- | -------------- |
+|              |                                   |                |
+
+
+
+Changelog
+
+| Editor       | Comments                                              | Date           |
+| ------------ | ----------------------------------------------------- | -------------- |
+| billings     | Initial draft                                         | 16 Apr 2020    |
+
+
 ## Objective
 
 Provide a single mechanism that reveals the external package dependency details for a build target in any bazel project.
